@@ -91,11 +91,16 @@
   2. Change config.py with the variables suitable for you and add the file to .gitignore
 
 ## Access the app
+First time run the following command to create the database and start the app:
 ```shell
 python run.py --setup
 ```
 Go to [http://localhost:5000](http://localhost:5000) for website and [http://localhost:5000/admin](http://localhost:5000/admin) for the administrator interface
 
+Later you can start the app with the command:
+```shell
+python run.py
+```
 
 License
 =======
