@@ -1,5 +1,9 @@
 .cbp-rfgrid{
-	padding: 0;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 90%;
 }
 .cbp-rfgrid li a div.cbp-rfgrid {
 	margin: 0 auto;
