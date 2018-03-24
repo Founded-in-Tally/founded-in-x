@@ -307,6 +307,10 @@ a.no-link {
 	height: 150px;
 }
 
+.no-list {
+  list-style: none;
+}
+
 @media screen and (min-width: 769px) {
 
 	#left_title{
