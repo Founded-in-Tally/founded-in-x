@@ -1,71 +1,460 @@
-{% extends "base.html" %}
-{% block title %}Founded in Romania - The most innovative startups in the Romania{% endblock %}
-{% block head %}
-    {{ super() }}
-        <meta property="og:url" content="http://foundedinromania.com/" />
-        <meta property="og:type" content="website" />
 
-        <script>
-        /**
-        * Function that tracks a click on an outbound link in Google Analytics.
-        */
-        var trackOutboundLink = function(url) {
-           ga('send', 'event', 'outbound', 'click', url);
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:title" content="" />
+    <link rel="shortcut icon" href="/static/favicon.png">
+
+    <link rel="apple-touch-icon-precomposed" href="http://foundedinnorway.com/static/images/fin_logo.png" />
+
+    <link rel="stylesheet" type="text/css" href="/static/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/component.css" />
+
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+
+    <!-- Min form -->
+    <link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/component_min_form.css" />
+
+    <style type="text/css">
+      body{
+        background-color: #2DA6CE !important;
+      }
+
+      .cbp-rfgrid {
+        margin: 0 auto;
+      }
+
+      .cbp-rfgrid li a div {
+        background: rgba(255, 178, 45, 0.5) !important;
+      }
+      .container .featured-title {
+        background-color: #2DA6CE !important;
+      }
+
+      .cbp-spmenu {
+          background: #2DA6CE !important;
+      }
+
+      .cbp-spmenu h3 {
+          color: #fff;
+          background: none;
+      }
+
+      .cbp-spmenu a {
+          color: #fff;
+      }
+
+      .cbp-spmenu a:hover {
+          background: none;
+      }
+
+
+        .cbp-spmenu a {
+            background: #ffb22d !important;
+            color: #fff;
         }
-        </script>
-{% endblock %}
-{% block container_header%}
-    <h1>Founded in Romania - The most innovative startups in Romania</h1>
-    <span>Romania has a fast growing startup scene. We invented the fountain pen, the modern jet engine, discovered insulin and launched <a href="http://netocratic.com/romanian-tech-startup-scene-3286" target="_blank">some impressive startups</a>.
-      Inspired by <a href="http://foundedinholland.com" target="_blank">Founded in Holland</a>, this list is dedicated to promote Romanian innovative startups that promise to inspire. <a href="/about">Learn&nbsp;more</a> about the initiative.</span>
-    <span class="apply">Want to join this list? <a href="#join">Submit&nbsp;your&nbsp;Romanian&nbsp;startup.</a></span>
-{% endblock %}
 
-{% block container_inner%}
 
-<ul class="cbp-rfgrid">
-    {% for company in companies %}
-    <li>
-        <a href="{{ company.url }}" target="_blank" onclick="trackOutboundLink('{{ company.url }}'); return true;">
-            <img src="static/images/logos/{{ company.logo }}" alt="{{ company.name }}" />
-            <div>
-                <h3>{{ company.name }}</h3>
+        .cbp-spmenu a:active {
+            background: #ffb22d !important;
+            opacity: 0.5;
+            color: #fff;
+        }
+
+
+    </style>
+
+    <!-- template custom styles -->
+    <style>
+
+    </style>
+
+
+
+
+
+    <script src="/static/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/static/js/modernizr.custom_min_form.js"></script>
+  </head>
+  <body class="cbp-spmenu-push">
+    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="menuRight">
+            <a href="/" class="current">Founded in Tallahassee</a>
+            <a href="/about">About&nbsp;the&nbsp;initiative</a>
+            <a href="mailto:">Contact</a>
+
+            <!-- <a class="typeform-share link" href="https://weekly.typeform.com/to/HHO2Uc" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a>
+            <a href="https://drive.google.com/folderview?id=0B7rp4qZAI1DoN3haMk0zTHA4aTg&amp;usp=sharing" target="_blank">Press&nbsp;kit&nbsp;&nbsp;<i class="fa fa-external-link" style="font-size:14px;"></i></a>
+            <a href="faq">FAQ</a>
+            <a href="advertise">Advertise</a>
+            <a href="http://foundedinholland.spreadshirt.nl/" target="_blank">Shop&nbsp;&nbsp;<i class="fa fa-external-link" style="font-size:14px;"></i></a>
+            <a href="mailto:join@foundedinholland.com" target="_blank">Contact</a> -->
+            <a href="http://foundedx.com" target="_blank">Founded&nbsp;X&nbsp;&nbsp;<i class="fa fa-external-link" style="font-size:14px;"></i></a>
+    </nav>
+    <a id="showRightPush" class="toggle-menu menu-right push-body menu-icon jPushMenuBtn menu-active"><i class="fa fa-bars"></i></a>
+    <div class="container">
+
+      <header class="clearfix">
+        <div class="clearfix">
+              <a href="/" class="no-link">
+              <div class="logo_container">
+                  <span id="left_title">FOUNDED IN</span>
+
+
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Ebene_1" x="0px" y="0px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve" height="100px" width="100px"><g><path d="M21.1,3c0.2,0,0.3,0,0.5,0c1.9,0.2,3.3,0.9,4.2,2.1c1,1.3,1.4,3.3,1,5.6c-0.2,1.4-0.5,2.3-0.9,3.4   c-0.4,1.2-0.8,2.5-1.2,4.6c-0.2,1.3-0.9,4.6-0.9,4.6l0,0l0,0c-0.4,2.4-1.4,3.5-3.4,3.5c-0.2,0-0.5,0-0.7,0c-0.9-0.1-1.5-0.4-2-1   C16.9,24.7,17,23,17,22.3l0.3-2.4v-0.1v-0.1c0-2.4-0.1-3.8-0.2-5.4s-0.2-3.5-0.2-7.2C17,4.9,18.8,3,21.1,3 M21.1,2   C18.4,2,16,4.2,16,7.4c0,7.1,0.5,7.5,0.4,12.5l-0.3,2.4c-0.2,2,0.1,5.2,3.5,5.6c0.3,0,0.6,0.1,0.9,0.1c3.4,0,4.1-2.7,4.4-4.3   c0,0,0.8-3.4,0.9-4.7c0.6-3.8,1.6-4.9,2-8c0.6-4.1-0.7-8.2-6.1-8.9C21.5,2.1,21.3,2,21.1,2L21.1,2z"/></g><g><path d="M8.9,3C11.2,3,13,4.9,13,7.4c0,3.6-0.1,5.5-0.2,7.2c-0.1,1.6-0.2,2.9-0.2,5.4v0.1v0.1l0.3,2.4c0.1,0.7,0.2,2.4-0.7,3.5   c-0.4,0.6-1.1,0.9-2,1c-0.3,0-0.5,0-0.7,0c-2,0-3-1.1-3.4-3.5l0,0l0,0c0,0-0.7-3.3-0.9-4.6c-0.3-2.1-0.8-3.4-1.2-4.6   c-0.3-1-0.7-2-0.9-3.4c-0.3-2.3,0-4.3,1-5.6c1-1.4,2.4-2.1,4.3-2.3C8.5,3.1,8.7,3,8.9,3 M8.9,2C8.7,2,8.5,2,8.3,2   c-5.4,0.7-6.8,4.8-6.1,9c0.5,3.1,1.4,4.2,2,8c0.2,1.3,0.9,4.7,0.9,4.7c0.2,1.6,1,4.3,4.4,4.3c0.3,0,0.6,0,0.9-0.1   c3.4-0.4,3.7-3.6,3.5-5.6l-0.3-2.4c-0.1-5,0.4-5.4,0.4-12.5C14,4.2,11.6,2,8.9,2L8.9,2z"/></g><g><path d="M22,5c-2.9,1.4-4.5,6.1-4.6,7.8c-0.2,2.1,0,3.2,0.1,4c0.1,1,0.6,1.4,1.1,1.4c0.6,0,1-0.7,0.4-1.7c-2-3,0.7-7.7,3.1-10   c2.8,4.7,3.9,11,1,11.2c-1.1,0.1-0.7,1.5,0.2,1.5c0.4,0,0.9-0.3,1.4-1c0.6-0.9,0.7-1.4,0.9-2.4C25.8,14.4,25.6,7.3,22,5L22,5z"/></g><g><path d="M8,5c-3.7,2.4-3.9,9.4-3.5,10.8c0.2,1,0.3,1.5,0.9,2.4c0.5,0.7,1,1,1.4,1c0.9,0,1.4-1.4,0.2-1.5c-2.9-0.2-1.9-6.5,1-11.2   c2.3,2.3,5.1,7,3.1,10c-0.7,1-0.2,1.7,0.4,1.7c0.4,0,0.9-0.4,1.1-1.4c0.1-0.8,0.3-1.9,0.1-4C12.5,11.1,11,6.3,8,5L8,5z"/></g></svg>
+
+
+
+              <span id="right_title" class="capital">TALLAHASSEE</span>
+              </div>
+              </a>
             </div>
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
 
-{% block container_join_box %}
-    <div class="join-box">
-        <a name="join" class="no-link"></a>
-        <span><strong>What do all these companies have in common?</strong><br>
-        1) They were founded in Romania in the 21st century<br>
-        2) They have the ambition to transform their industry<br>
-        3) They promise to try to make it possible to download beer<br><br>
-        Does your startup meet these criteria and do you want to support this initiative?<br>
-        <strong>Submit your Romanian startup by filling out the <a class="typeform-share link" href="https://cloudients.typeform.com/to/kEfvl8" data-mode="2" target="_blank">application&nbsp;form</a>.</strong>
+
+
+                <div class="clearfix header_text">
+                  Hello, welcome to Founded in Tallahassee, this is the intro section, you can include valid html here such as <a href="http://foundedx.com" target="_blank">links</a>.
+              </div>
+
+                <span class="apply">Want to join this list? <a href="#join">Submit&nbsp;your&nbsp;startup.</a></span>
+
+                <br><br>
+
+      </header>
+
+      <br>
+      <br>
+
+        <div class="featured-line">
+          <div class="featured-title" style="width:180px;">
+              <i class="fa fa-star-o"></i>&nbsp;&nbsp;&nbsp;All&nbsp;Startups
+          </div>
+        </div>
         <br>
-        <strong>Do you know an innovative startup? <a class="typeform-share link" href="https://cloudients.typeform.com/to/i8zVtD" data-mode="2" target="_blank">Let us know it</a>.</strong>
+        <ul class="cbp-rfgrid">
+          <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/foundedx-badge.png"><div><h3>3D Hubs</h3></div></a></li>
+          <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/foundedx-badge.png"><div><h3>3D Hubs</h3></div></a></li>
+          <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/foundedx-badge.png"><div><h3>3D Hubs</h3></div></a></li>
+          <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/foundedx-badge.png"><div><h3>3D Hubs</h3></div></a></li>
+          <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/foundedx-badge.png"><div><h3>3D Hubs</h3></div></a></li>
+        </ul>
 
-        <br><br><br>
-        <div>
-          <span style="display:inline;"><a class="typeform-share link join-button" href="https://cloudients.typeform.com/to/kEfvl8" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a></span>
-          <span style="display:inline;"><a class="typeform-share link join-button" href="https://cloudients.typeform.com/to/i8zVtD" data-mode="2" target="_blank">Suggest a Startup</a></span>
-        </div>
-        <br><br>
-        <span>Follow on <a href="https://www.facebook.com/foundedinromania" target="_blank"><i class="fa fa-facebook-square"></i>&nbsp;Facebook</a> &
-          <a href="https://twitter.com/foundedromania" target="_blank"><i class="fa fa-twitter-square"></i>&nbsp;Twitter</a>
-           &nbsp;&middot;&nbsp; <a href="/about">About&nbsp;the&nbsp;initiative</a>
-           &nbsp;&middot;&nbsp; <a href="https://drive.google.com/folderview?id=0B3DAegL7MGt7MmRkbFRROVBPSmM&usp=sharing" target="_blank">Press&nbsp;kit</a>
-           &nbsp;&middot;&nbsp; <a class="typeform-share link" href="https://cloudients.typeform.com/to/kEfvl8" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a>
-           &nbsp;&middot;&nbsp; <a href="mailto:join@foundedinromania.com" target="_blank">Contact</a></span>
+            <div class="join-box">
+              <a name="join" class="no-link"></a>
+                <span class="join-box-span">
+                  <strong>What do all these companies have in common?</strong><br>
+                    1) Something<br>
+                    2) Soemthing else<br>
+                    3) Another thing<br><br>
 
-        <div align="center" style="width:170px; margin:0 auto;">
-            <div class="fb-like" data-href="https://facebook.com/foundedinromania" data-layout="button" data-action="like" data-show-faces="false" data-share="true" style="margin-bottom:-20px; padding:5px;"></div>
-            <div style="padding:5px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://foundedinromania.com/" data-via="foundedromania" data-count="none" data-dnt="true">Tweet</a></div>
-        </div>
+                  Does your startup meet these criteria and do you want to support this initiative?<br>
+
+                  <strong>
+                    Submit your startup by joining below.
+                  </strong>
+                  <br><br><br>
+                  <h2>Startups</h2>
+                  <a id="join_list" class="link join-button" href="#">Join&nbsp;the&nbsp;list</a>
+                  <div id="form_container" class="transition">
+
+                      <form id="join_form" class="simform" autocomplete="off">
+                <div class="simform-inner">
+                  <ol class="questions">
+                    <li>
+                      <span><label for="q1">Startup name*</label></span>
+                      <input id="q1" name="q1" type="text" data-validate="yes"/>
+                    </li>
+                    <li>
+                      <span><label for="q2">Year founded*</label></span>
+                      <input id="q2" name="q2" type="text" data-validate="yes"/>
+                    </li>
+                    <li>
+                      <span><label for="q3">Web address*</label></span>
+                      <input id="q3" name="q3" type="text" placeholder="http://" data-validate="yes"/>
+                    </li>
+                    <li>
+                      <span><label for="q4">Twitter handle</label></span>
+                      <input id="q4" name="q4" type="text" placeholder="eg. @wearesupernice"/>
+                    </li>
+                    <li>
+                      <span><label for="q5">URL to high resolution (preferably white) logo*</label></span>
+                      <input id="q5" name="q5" type="text" placeholder="http://" data-validate="yes"/>
+                    </li>
+                    <li>
+                      <span><label for="q6">Contact person* (their name will not be published)</label></span>
+                      <input id="q6" name="q6" type="text" data-validate="yes"/>
+                    </li>
+                    <li>
+                      <span><label for="q7">email (optional, but nice to stay updated)</label></span>
+                      <input id="q7" name="q7" type="email" data-validate=""/>
+                    </li>
+                  </ol><!-- /questions -->
+                  <button class="submit" type="submit">Join</button>
+                  <div class="controls">
+                    <button class="next"></button>
+                    <div class="progress"></div>
+                    <span class="number">
+                      <span class="number-current"></span>
+                      <span class="number-total"></span>
+                    </span>
+                    <span class="error-message"></span>
+                  </div><!-- / controls -->
+                </div><!-- /simform-inner -->
+                <span class="final-message"></span>
+              </form><!-- /simform -->
+                  </div>
+
+              </span>
+
+                <br><br>
+
+                <span class="join-box-span">
+                  Follow on
+
+
+
+
+                  <a href="/about">
+                    About&nbsp;the&nbsp;initiative
+                  </a> &nbsp;&middot;&nbsp;
+                  <a href="mailto:" target="_blank">
+                    Contact
+                  </a>
+                </span>
+
+                <div align="center" style="width:170px; margin:0 auto;">
+                  <div class="fb-like" data-href="" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+                    <div style="padding:5px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="" data-via="" data-count="none" data-dnt="true">Tweet</a></div>
+                </div>
+
+                <span class="join-box-span">
+                  <h2>Join our</h2>
+                  <a id="register_ea" class="link join-button" href="#">Mailing List</a>
+
+              </span>
+
+              <div id="ea_form_container" class="transition">
+                    <form id="ea_form" class="simform" autocomplete="off">
+              <div class="simform-inner">
+                <ol class="questions">
+                  <li>
+                    <input id="ea" name="ea" type="email" data-validate="yes" placeholder="email"/>
+                  </li>
+                </ol><!-- /questions -->
+                <button class="submit" type="submit">Join</button>
+                <div class="controls">
+                  <button class="next"></button>
+                  <div class="progress"></div>
+                  <span class="number">
+                    <span class="number-current"></span>
+                    <span class="number-total"></span>
+                  </span>
+                  <span class="error-message"></span>
+                </div><!-- / controls -->
+              </div><!-- /simform-inner -->
+              <span class="final-message"></span>
+            </form><!-- /simform -->
+                </div>
+
+            </div>
+
+
+            <footer>
+              <span>
+
+
+              </span>
+                <a href="http://foundedx.com" class="no-link">
+                  <img src="/static/images/foundedx-badge.png" alt="Foundedx">
+                </a>
+
+            </footer>
 
     </div>
-{% endblock %}
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="/static/js/jPushMenu.js"></script>
+  <script>
+    jQuery(document).ready(function($) {
+      $('.toggle-menu').jPushMenu();
+    });
+  </script>
+
+    <script type="text/javascript">
+      $("body").on("click", "#join_list", function(e){
+        e.preventDefault();
+        var $this = $(this);
+        if ($this.hasClass("closed")){
+          $("#form_container").css("height", "336px");
+          $this.removeClass("closed");
+          $this.addClass("open");
+        }else if ($this.hasClass("open")){
+          $("#form_container").css("height", "0px");
+          $this.removeClass("open");
+          $this.addClass("closed");
+        }else {
+          $("#form_container").css("height", "336px");
+          $this.addClass("open");
+        };
+      });
+      $("body").on("click", "#register_ea", function(e){
+        e.preventDefault();
+        var $this = $(this);
+        if ($this.hasClass("closed")){
+          $("#ea_form_container").css("height", "336px");
+          $this.removeClass("closed");
+          $this.addClass("open");
+        }else if ($this.hasClass("open")){
+          $("#ea_form_container").css("height", "0px");
+          $this.removeClass("open");
+          $this.addClass("closed");
+        }else {
+          $("#ea_form_container").css("height", "336px");
+          $this.addClass("open");
+        };
+      });
+
+    </script>
+
+    <!-- Min form -->
+    <script src="/static/js/classie.js"></script>
+  <script src="/static/js/stepsForm.js"></script>
+
+  <script>
+    var theForm = document.getElementById( 'join_form' );
+                    //disable form autocomplete
+                    theForm.setAttribute( "autocomplete", "off" );
+
+    new stepsForm( theForm, {
+      onSubmit : function( form ) {
+        // hide form
+        classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+        var data = {
+          "q1": $("#q1").val(),
+          "q2": $("#q2").val(),
+          "q3": $("#q3").val(),
+          "q4": $("#q4").val(),
+          "q5": $("#q5").val(),
+          "q6": $("#q6").val(),
+          "q7": $("#q7").val(),
+        }
+
+        function success(data){
+              // let's just simulate something...
+          var messageEl = theForm.querySelector( '.final-message' );
+          messageEl.innerHTML = 'Thank you for joining the initiative';
+          classie.addClass( messageEl, 'show' );
+          $("#q1").val("");
+          $("#q2").val("");
+          $("#q3").val("");
+          $("#q4").val("");
+          $("#q5").val("");
+          $("#q6").val("");
+          $("#q7").val("");
+          };
+
+        $.ajax({
+              type: "post",
+              data: data,
+              url: '/add_startup',
+              success: success
+          }).fail(function(e){
+              alert("error - add startup");
+          });
+
+      }
+    } );
+
+    var eaForm = document.getElementById( 'ea_form' );
+                    //disable form autocomplete
+                    eaForm.setAttribute( "autocomplete", "off" );
+
+    new stepsForm( eaForm, {
+      onSubmit : function( form ) {
+        // hide form
+        classie.addClass( eaForm.querySelector( '.simform-inner' ), 'hide' );
+
+        var data = {
+          "ea": $("#ea").val(),
+        }
+
+        function success(data){
+              // let's just simulate something...
+          var messageEl = eaForm.querySelector( '.final-message' );
+          messageEl.innerHTML = 'Thank you for being a pioneer.';
+          classie.addClass( messageEl, 'show' );
+          };
+
+        $.ajax({
+              type: "post",
+              data: data,
+              url: '/add_ea',
+              success: success
+          }).fail(function(e){
+              alert("error - add early adopter");
+          });
+
+      }
+    } );
+
+  </script>
+
+
+
+  <!-- Smooth Scroll -->
+    <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+        }
+      }
+      });
+    });
+    </script>
+
+    <!-- Google Analytics -->
+
+
+  <!-- Twitter -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  </script>
+
+    <!-- Facebook -->
+
+    <div id="fb-root"></div>
+  <script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=700432146672748&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+  </body>
+</html>

@@ -6,13 +6,13 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://foundedinromania.com/</loc>
-  <lastmod>2014-12-09T10:39:21+00:00</lastmod>
+  <loc>http://foundedintally.com/</loc>
+  <lastmod>2018-03-24T12:00:00+00:00</lastmod>
   <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://foundedinromania.com/about</loc>
-  <lastmod>2014-11-13T12:46:07+00:00</lastmod>
+  <loc>http://foundedintally.com/about</loc>
+  <lastmod>2018-03-24T12:00:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>
