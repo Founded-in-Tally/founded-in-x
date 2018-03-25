@@ -137,3 +137,18 @@ $ pip install -r requirements.txt
 This software is licensed under the MIT License. See [LICENSE file](https://github.com/Founded-in-Tally/founded-in-tally/blob/master/LICENSE.md) for details.
 
 Portions of this software are copyright of their own owners as described in the files containing them.
+
+## TODO
+
+- Models
+- Form to submit company (startup)
+- Form to submit contributor
+- Form to submit events
+- Load and display companies on index
+- Load and display contributors on contributors page
+- Load and display events on events page
+- Navigation updates (add new pages)
+- CONTENT/COPY to pages
+- Deploy to Heroku
+- (Admin user creation)
+- Companies input (admin)
